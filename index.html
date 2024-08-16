@@ -6,33 +6,38 @@
     <title>제주맥주</title>
     <style>
         @font-face {
-            font-family: 'HS-Regular';
-            src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+            font-family: 'PTAnboR';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTAnboR.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
         }
 
         h3 {
-            font-family: 'HS-Regular';
+            font-family: 'PTAnboR';
             font-size: 200px;
             text-align: center;
         }
 
-        input[type="text"] {
-            box-sizing: border-box;
-            font-size: 50px;
+        h4 {
+            font-family: 'PTAnboR';
+            font-size: 80px;
         }
 
         #copyTxt1 {
-            width: 600px;
+            font-size: 50px;
         }
-
-        #copyTxt2 {
-            width: 2200px;
+        textarea {
+            box-sizing: border-box;
+            font-size: 50px;
+            width: 900px;
+            height: 250px;
+            word-wrap: break-word;
         }
 
         button {
+            font-family: 'PTAnboR';
             font-size: 50px;
+            background-color: rgb(184, 184, 233);
         }
     </style>
 </head>
@@ -40,10 +45,12 @@
 <body>
     <h3>제주맥주</h3>
 
+    <h4>인스타그램 아이디</h4>
     <input type="text" value="@jejubeerofficial" id="copyTxt1">
     <button onclick="copy('copyTxt1')">복사하기</button><br><br>
 
-    <input type="text" value="@jejubeerofficial @club_jejunouveau #제주맥주 #제주누보 #논알콜 @floral_shoes #덕성한복파티" id="copyTxt2">
+    <h4>인스타그램 스토리 해시태그</h4>
+    <textarea id="copyTxt2">@jejubeerofficial @club_jejunouveau #제주맥주 #제주누보 #논알콜 @floral_shoes #덕성한복파티</textarea>
     <button onclick="copy('copyTxt2')">복사하기</button>
 
     <script>
