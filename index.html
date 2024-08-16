@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>제주맥주</title>
+    <style>
+        @font-face {
+            font-family: 'HS-Regular';
+            src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h3 {
+            font-family: 'HS-Regular';
+            font-size: 50px;
+        }
+
+        input[type="text"] {
+            box-sizing: border-box;
+        }
+
+        #copyTxt1 {
+            width: 200px;
+        }
+
+        #copyTxt2 {
+            width: 580px;
+        }
+    </style>
 </head>
+
 <body>
-    <h3>제주맥주 ㅇ</h3>
-    <img src="poto.jpg" width="500px" height="500px">
+    <h3>제주맥주</h3>
+
+    <input type="text" value="@jejubeerofficial" id="copyTxt1">
+    <button onclick="copy('copyTxt1')">복사하기</button><br><br>
+
+    <input type="text" value="@jejubeerofficial @club_jejunouveau #제주맥주 #제주누보 #논알콜 @floral_shoes #덕성한복파티" id="copyTxt2">
+    <button onclick="copy('copyTxt2')">복사하기</button>
+
+    <script>
+        function copy(elementId) {
+            var copyTxt = document.getElementById(elementId);
+
+            copyTxt.select();
+            copyTxt.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copyTxt.value);
+
+            alert("복사되었습니다.");
+        }
+    </script>
 </body>
+
 </html>
