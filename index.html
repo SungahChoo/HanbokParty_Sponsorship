@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>인테이크</title>
+    <style>
+        @font-face {
+            font-family: 'PTAnboR';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTAnboR.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'PTBandocheB';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTBandocheB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'PTBandocheB';
+            font-size: 140px;
+            margin: 0 20px 0 0;
+        }
+
+        h4 {
+            font-family: 'PTBandocheB';
+            font-size: 80px;
+            text-align: center;
+        }
+
+        #copyTxt1 {
+            font-size: 50px;
+            text-align: center;
+            width: 100%;
+        }
+
+        textarea {
+            box-sizing: border-box;
+            font-size: 50px;
+            height: 250px;
+            word-wrap: break-word;
+            text-align: center;
+            width: 100%;
+        }
+
+        button {
+            font-family: 'PTBandocheB';
+            font-size: 50px;
+            text-align: center;
+            color: black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <h3>인테이크</h3>
+        <img src="슈가로로.png" width="420px" height="120px">
+    </div>
+
+    <h4>인스타그램 아이디</h4>
+    <input type="text" value="@intakefoods" id="copyTxt1">
+    <button onclick="copy('copyTxt1')">복사하기</button><br><br>
+
+    <h4>인스타그램 스토리 해시태그</h4>
+    <textarea id="copyTxt2">@intakefoods #슈가로로 #코코제로 @floral_shoes #덕성한복파티</textarea>
+    <button onclick="copy('copyTxt2')">복사하기</button>
+
+    <script>
+        function copy(elementId) {
+            var copyTxt = document.getElementById(elementId);
+
+            copyTxt.select();
+            copyTxt.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copyTxt.value);
+
+            alert("복사되었습니다.");
+        }
+    </script>
+</body>
+
+</html>
