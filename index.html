@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>세븐브로이</title>
+    <style>
+        @font-face {
+            font-family: 'PTAnboR';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTAnboR.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'PTBandocheB';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTBandocheB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'PTBandocheB';
+            font-size: 140px;
+            margin: 40px 20px 0 0;
+        }
+
+        h4 {
+            font-family: 'PTBandocheB';
+            font-size: 80px;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        h5 {
+            font-family: 'PTBandocheB';
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #copyTxt1 {
+            font-size: 50px;
+            text-align: center;
+            width: 100%;
+        }
+
+        textarea {
+            box-sizing: border-box;
+            font-size: 50px;
+            height: 200px;
+            word-wrap: break-word;
+            text-align: center;
+            width: 100%;
+        }
+
+        button {
+            font-family: 'PTBandocheB';
+            font-size: 50px;
+            text-align: center;
+            color: black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <h3>세븐브로이</h3>
+        <img src="세븐브로이.png" width="500px" height="160px">
+    </div>
+
+    <h4>인스타그램 아이디</h4>
+    <input type="text" value="@sevenbraucraftbeer" id="copyTxt1">
+    <button onclick="copy('copyTxt1')">복사하기</button><br><br>
+
+    <h4>인스타그램 스토리 해시태그</h4>
+    <h5>대표 논알콜</h5>
+    <textarea id="copyTxt2">@sevenbraucraftbeer #세븐브로이 #맥주 #맥주스타그램 #대표논알콜 @floral_shoes #덕성한복파티</textarea>
+    <button onclick="copy('copyTxt2')">복사하기</button>
+
+    <h5>대표 논알콜 얼그레이볼</h5>
+    <textarea id="copyTxt3">@sevenbraucraftbeer #세븐브로이 #맥주 #맥주스타그램 #대표논알콜얼그레이볼 @floral_shoes #덕성한복파티</textarea>
+    <button onclick="copy('copyTxt3')">복사하기</button>
+
+    <script>
+        function copy(elementId) {
+            var copyTxt = document.getElementById(elementId);
+
+            copyTxt.select();
+            copyTxt.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copyTxt.value);
+
+            alert("복사되었습니다.");
+        }
+    </script>
+</body>
+
+</html>
